@@ -1,0 +1,17 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: nginx-deploy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      city: seffner
+  template:
+    metadata:
+      labels:
+        city: seffner
+    spec:
+      containers:
+      - name: nginximage
+        image: nginx
