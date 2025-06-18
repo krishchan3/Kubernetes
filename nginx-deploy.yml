@@ -14,4 +14,21 @@ spec:
     spec:
       containers:
       - name: nginximage
-        image: nginx:latest
+        image: krishchan3/nginx:latest
+
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: nginx-sa
+spec:
+  selector:
+    city: seffner
+  type: NodePort
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+    nodePort: 32110
+  
