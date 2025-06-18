@@ -13,7 +13,7 @@ spec:
         city: seffner
     spec:
       containers:
-      - name: nginximage
+      - name: nginx
         image: krishchan3/nginx:latest
 
 
